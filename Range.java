@@ -7,13 +7,14 @@ public class Range implements IntegerSequence{
 *@param start : the starting value (inclusive)
 *@param end : the ending value which is also inclusive.*/
   public Range(int start,  int end){
-
+    this.start = start;
+    this.end = end;
   }
 
   public void reset(){
 
   }
-  public int length(){  
+  public int length(){
 
   }
 
