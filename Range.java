@@ -7,9 +7,14 @@ public class Range implements IntegerSequence{
 *@param start : the starting value (inclusive)
 *@param end : the ending value which is also inclusive.*/
   public Range(int start,  int end){
-    this.start = start;
-    this.end = end;
-    reset();
+    if (start > end) {
+      throw new IllegalArgumentException ("Start should be <= end.");
+    } else {
+      this.start = start;
+      this.end = end;
+      reset();
+    }
+
   }
 
   public void reset(){
