@@ -14,9 +14,9 @@ public class ArraySequence implements IntegerSequence{
   public void reset(){
     currentIndex = 0;
   }
-  
+
   public int length(){
-    return 0;
+    return data.length;
   }
 
   //When current is no longer a valid element in the range, it should return false.
