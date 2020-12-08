@@ -28,7 +28,13 @@ public class ArraySequence implements IntegerSequence{
   //This will return the current value, it will also increase current value by one index.
   //e.g.  if current is 5. This will make current 6, and return 5.
   public int next(){
-    return 0;
+    if (hasNext()) {
+      int retIndex = currentIndex;
+      currentIndex ++;
+      return data[retIndex];
+    }else {
+      throw new NoSuchElementException ("No more elements left in this sequence.");
+    }
   }
 
 }
